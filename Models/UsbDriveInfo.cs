@@ -1,9 +1,12 @@
-﻿namespace Ventoy_Builder.Models
+using System.IO; 
+
+namespace Ventoy_Builder.Models
 {
     public class UsbDriveInfo
     {
         public string DriveLetter { get; set; } = "";
         public string Label { get; set; } = "";
+        public string ModelName { get; set; } = "";
         public string SizeText { get; set; } = "";
         public string FreeSpaceText { get; set; } = "";
         public string FileSystem { get; set; } = "";
@@ -12,7 +15,9 @@
         public long TotalSizeBytes { get; set; }
         public long FreeSpaceBytes { get; set; }
 
+        public DriveType DriveType { get; set; }
         public bool IsRemovable { get; set; }
+        public bool IsUSBInterface { get; set; }
         public bool IsReady { get; set; }
     }
 }
